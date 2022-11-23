@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>輸入樂透號碼(檢查重複)，比對亂數樂透開獎，顯示種了哪幾個號碼</title>
+</head>
+<body>
+    <script>
+        /* 關鍵字搜尋
+        js const w3
+        js math w3
+        js array w3
+        js not w3
+        */
+        // const 宣告常數
+        const lotto = []
+        while(lotto.length < 6) {
+            num = Math.floor(Math.random()* 42 + 1);
+            // ! not 非
+            if(!lotto.includes(num)) { // 陣列若不含num
+                lotto.push(num); // push 加入陣列
+                console.log(lotto.toString());
+            } else {
+                console.log(num + "號碼重複了");
+            }
+        }
+    </script>
+</body>
+</html>

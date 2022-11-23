@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict"
+        // JavaScript Object { 屬性 : 值， 方法 : 匿名函式 }
+        var person = {
+            firstName : "飛鴻",
+            lastName : "黃",
+            fullName : function(){
+                return this.lastName + " " + this.firstName; // this 是指當前 {} 物件                
+            }
+        };
+        var s = person.fullName(); // 這行執行時，this會是 person
+        console.log(s);
+        // 自我挑戰 設計 display() 方法
+        // JavaScript Object { 屬性 : 值， 方法 : 匿名函式 }
+        var person = { //person 是參考變數，{key : value} 是JavaScript 物件
+        name : "張無忌",
+        age : 20,
+        weapons : [
+            {
+                name: "倚天劍",
+                price: 1000
+            },
+            {
+                name: "屠龍刀",
+                price: 2000
+            },
+            {
+                name: "仙女棒",
+                price: 3000
+            }
+        ],
+        // methods(方法)
+        display : function(){
+            for(var w of this.weapons){
+                console.log(w.name + " " + w.price);
+            }
+        }
+    };
+    person.display();
+    </script>
+</body>
+</html>

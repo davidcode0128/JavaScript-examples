@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+      // ! enter
+        function test() { // 大括號代表獨立的區域範圍
+                console.log("test() a = " + a); // 看不見函示範圍外的 a 區域變數
+        }
+        // console.log 相當於 java 的 system.out.println
+        test(); // 呼叫test
+
+        a = 2;
+        console.log(a);
+        if( a === undefined){ // === 嚴格比對 == 模糊比對 undefined 未設定值
+          console.log("a is undefined");
+        }
+        else{
+          console.log("a is defined");
+        }
+        test(); // 呼叫test
+        // 以 var 宣告的變數，其作用範圍(Scope)僅於該函數內，只能在函數內使用
+        // 如果在函數外宣告變數，其作用範圍則為全域(Global)，能在任何地方使用
+        // var a; 
+        let a; 
+        // let 變數，只能在特定區域範圍有效，可以不設初值
+        // a 是區域變數，僅在 script 範圍有效，test()函式無法使用
+    </script>
+  
+</body>
+</html>

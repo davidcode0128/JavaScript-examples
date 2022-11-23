@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        // 陣列使用 [] 將多個物件包含進來
+        var weapons = [
+            {
+                name: "倚天劍",
+                price: 1000
+            },
+            {
+                name: "屠龍刀",
+                price: 2000
+            },
+            {
+                name: "仙女棒",
+                price: 3000
+            }
+        ];
+        console.log(weapons);
+        console.log(weapons[0]);
+        console.log(weapons[2].name)
+
+        for (var item of weapons){ // 相當於 java 加強版 for 用法 of = :
+            console.log(item);
+        }
+    </script>
+</body>
+</html>

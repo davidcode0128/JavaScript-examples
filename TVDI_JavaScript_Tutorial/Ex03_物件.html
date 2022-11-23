@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 物件由 key 與 value 資料所組成 相當於 java 的 map()
+        // {key ; value} 透過 key 存取 value
+        "use strict";
+        var a = {100 : "中正區", 103 : "大同區", 104 : "中山區"}
+        console.log(a["100"]); // a[key] 可以用字串當 key
+        console.log(a[103]); // a[key] 也可以用整數當 key
+
+        var b = "104";
+        console.log(a[b]); // 也可以用變數 b 當 key
+        // console.log(a.100); 錯誤寫法，數字屬性只能使用 [100]
+        console.log(typeof a); // typeof 判斷物件型別
+
+        var person = {
+            name : "張無忌",
+            age : 20
+        };
+        console.log(typeof person);
+        console.log(person);
+        console.log(person.name);
+        console.log(person["age"]);
+    </script>
+</body>
+</html>

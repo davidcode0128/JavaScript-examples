@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // <input> 提供輸入文字框
+        // <ul> 項目清單
+        function add() {
+        var name = (document.getElementById("name"));
+        var eng = parseFloat(document.getElementById("eng").value);
+        var math = parseFloat(document.getElementById("math").value);
+        var total = eng + math;
+        document.getElementById("total").textContent = total;
+    }
+        </script>
+</head>
+<body>
+
+    <p>
+        姓名: <input id="name" type="text">
+    </p>
+    <p>
+        英文: <input id="eng" type="text">
+    </p>    
+    <p>
+        數學: <input id="math" type="text">
+        <button onclick="add()">計算總分</button>
+    </p>
+    <ul id = "name"></ul>
+    <ul id="total">計算中</ul>
+</body>
+</html>

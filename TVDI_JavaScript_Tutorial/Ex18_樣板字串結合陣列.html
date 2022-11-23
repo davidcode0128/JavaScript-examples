@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .student{
+            margin: 16px;
+            padding: 16px;
+            width: 100px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div id="aaa">
+
+    </div>
+    <script>
+        var 學生陣列 = [
+            {name:"Tom", eng:100, math:99},
+            {name:"Amy", eng:80, math:85}
+        ];
+
+        var s = "";
+        for (var x of 學生陣列) {
+            var t = `;
+            <div class ="student">
+                <p>name ${x.name}</p>
+                <p>eng ${x.eng}</p>
+                <p>math ${x.math}</p>
+                </div>
+                `;
+            s += t;
+        }
+        document.getElementById("aaa").innerHTML = s;
+    </script>
+</body>
+</html>

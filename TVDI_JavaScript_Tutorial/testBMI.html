@@ -1,0 +1,260 @@
+<HTML>
+    <HEAD>
+    <TITLE>BMI值計算器</TITLE>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+    <style type="text/css">
+    <!--
+    a:link {
+        color: #0B6060;
+        text-decoration: none;
+    }
+    a:visited {
+        color: #2B737B;
+        text-decoration: none;
+    }
+    a:hover {
+        color: #FF6600;
+        text-decoration: underline;
+    }
+    .T-001 {
+        font-family: "新細明體";
+        font-weight: normal;
+        color: #333366;
+        font-size: 18px;
+    }
+    .style1 {color: #0B6060}
+    -->
+    </style>
+    <script language="JavaScript" type="text/JavaScript">
+    <!--
+    function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+      if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+        document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+      else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+    }
+    MM_reloadPage(true);
+    
+    function MM_findObj(n, d) { //v4.01
+      var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+        d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+      if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+      for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+      if(!x && d.getElementById) x=d.getElementById(n); return x;
+    }
+    
+    function MM_showHideLayers() { //v6.0
+      var i,p,v,obj,args=MM_showHideLayers.arguments;
+      for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+        if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+        obj.visibility=v; }
+    }
+    function computingBMI() {
+        number = /[0-9]/;
+        var flag = true;
+        var objHeight = document.form1.height;
+        var objWeight = document.form1.weight;
+        var height = Number(objHeight.value)/100;
+        var weight = Number(objWeight.value);
+        if (objHeight==null || objHeight.value=="") {
+            alert("請輸入您的身高");
+            flag = false;
+            return;
+        }
+        if (!number.test(height)) {
+            alert("您輸入的身高格式錯誤");
+            flag = false;
+            return;
+        }
+        if (objWeight==null || objWeight.value=="") {
+            alert("請輸入您的體重");
+            flag = false;
+        }
+        if (!number.test(weight)) {
+            alert("您輸入的體重格式錯誤");
+            flag = false;
+            return;
+        }
+        if (flag) {
+            var bmi = weight/(height*height);
+            document.form1.bmiValue.value = bmi.toString().substr(0,9);
+            
+        }
+    }
+    //-->
+    </script>
+    <meta name="generator" content="Namo WebEditor(Trial)">
+    </HEAD>
+    <BODY BGCOLOR=#FFFFFF background="Images/bk-01.gif" LEFTMARGIN=0 TOPMARGIN=0 MARGINWIDTH=0 MARGINHEIGHT=0>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr> 
+        <td><div align="center"> 
+            <TABLE WIDTH="728" BORDER=0 CELLPADDING=0 CELLSPACING=0 height="918">
+                        <TR>
+                            <TD height="49">                                
+                <TD height="49"> &nbsp;</TD>
+                <TD height="49"> &nbsp;</TD>
+                <TD height="49"> <IMG SRC="Images/a1-0_06.gif" WIDTH=6 HEIGHT=99 ALT=""></TD>
+                        </TR>
+              <TR> 
+                <TD COLSPAN=3 valign="top" background="Images/bk-02.gif" bgcolor="#FFFFFF"> 
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0" height="827">
+                    <tr> 
+                                        <td height="2" valign="bottom"> 
+                                            <p>&nbsp;</p>
+                                        </td>
+                    </tr>
+                    <tr> 
+                      <td height="20" valign="top"> 
+                                            <p>&nbsp;</p>
+    </td>
+                    </tr>
+                    <tr> 
+                      <td valign="top"><table width="600" border="0" align="center" cellpadding="0" cellspacing="0">
+                          <tr> 
+                            <td height="29"> <div align="left" class="T-001"><span class="T-001"> 
+                                <span style="vertical-align: bottom"> <font face="Wingdings 3" color="#666699" size="3">u</font></span><strong> 
+                                </strong><font face="Arial">BMI<strong>值計算</strong></font></span></div></td>
+                            <td><div align="right">
+                                                            <p>&nbsp;</p>
+    </div></td>
+                          </tr>
+                          <tr valign="top"> 
+                            <td height="20" colspan="2" style="border-top: 3px double #AEC8D7">　</td>
+                          </tr>
+                          <tr> 
+                            <td height="50" colspan="2"><div align="center"> 
+                                <table width="90%" border="0" cellpadding="0" cellspacing="0">
+                                                                <tr>
+                                                                    <td>
+                                                                        <p align="center"><span class="01"><strong>BMI值計算公式: &nbsp;&nbsp;&nbsp;</strong>BMI = 體重(公斤) / 身高<sup>2</sup>(公尺<sup>2</sup>)</span></p>
+                                                                        <p align="center"><span class="01">                                  例如：一個52公斤的人，身高是155公分，則BMI為 :</span> </p>
+                                                                                                          <p align="center"><font color="#0000FF" size="2" face="Arial"><strong>52(公斤)/1.55<sup>2<b> </b></sup></strong><b>( 公尺<strong><sup>2 </sup></strong>)=</b> <strong>21.6</strong></font></p>
+                                                                        <p align="center"><strong><span style="font-family: 新細明體; color: #FF6600"><font size="2">體重正常範圍為</font></span></strong><b><font size="2" color="#FF6600">&nbsp; 
+                                      BMI=18.5～24</font></b><font size="2" color="#FF6600"><b></b></font> 
+                                      <span class="01"><br>
+                                      </span><strong><font color="#C4D7E1">......................................................................................................................</font><br>
+                                      </strong> </p>
+                                                                        <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <form name="form1" method="post" action="">
+                                                                                        <div align="center"><strong><font color="#660099" size="2">快看看自己的<font face="Arial">BMI是否在理想範圍</font>吧!</font></strong> 
+                                                <br>
+                                                                                        </div>
+                                                                                        <table width="400" border="0" align="center" cellpadding="3" cellspacing="3" height="135">
+                                                                                            <tr>
+                                                                                                <td width="230" height="21" class="01">
+                                                                                                    <div align="right"><span class="01">身　高:</span> 
+                                                      <input name="height" type="text" size="11" style="border: 1px solid #0B6060">
+                                                      <font face="Arial"> cm</font>　</div>
+                                                                                                </td>
+                                                                                                <td width="149" height="21">
+                                                    <input type="button" name="Submit" value="開始計算" onClick="computingBMI()">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td width="230" height="21" class="01">
+                                                                                                    <div align="right">體　重: 
+                                                      <input name="weight" type="text" size="11" style="border: 1px solid #0B6060">
+                                                      <font face="Arial"> kg</font><font color="#FFFFFF">..</font></div>
+                                                                                                </td>
+                                                                                                <td width="149" height="21"><input type="reset" name="Submit2" value="清除重算"></td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td colspan="2" height="10">
+                                                                                                    <p style="margin-top: 0; margin-bottom: 0" align="center">
+                                                      &nbsp;</td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td height="24" colspan="2">
+                                                                                                    <div align="center" class="01">你的BMI為<br>
+                                                      <input name="bmiValue" type="text" size="15" style="border: 1px solid #2B737B; padding-left: 4; padding-right: 4; padding-top: 1; padding-bottom: 1; background-color: #D9F4F1">
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </table>
+                                                                                    </form>
+                                            
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                      
+                                                                        <table align="center" border="1" cellspacing="0" bordercolordark="black" bordercolorlight="black" height="159">
+                                                                            <TR borderColor=#cccccc bgColor="#FFCC99">
+                                                                                <TD width=100 height="35"></TD>
+                                                                                <TD width=150 height="35">
+                                                                                    <DIV align=center><FONT color=#000000><SPAN 
+    class=01>身體質量指數(BMI)<BR>(kg/m2)</SPAN><BR></FONT></DIV>
+                                                                                </TD>
+                                                                                <TD width=150 height="35">
+                                                                                    <DIV align=center><FONT color=#000000><SPAN 
+    class=01>腰圍<BR>(cm)</SPAN><BR></FONT></DIV>
+                                                                                </TD>
+                                                                            </TR>
+                                                                            <TR borderColor=#cccccc>
+                                                                                <TD class=01 width=100 bgColor="#CCFFFF">
+                                                                                    <DIV align=center>體重過輕</DIV>
+                                                                                </TD>
+                                                                                <TD class=01 width=150>
+                                                                                    <DIV align=center>BMI ＜ 18.5</DIV>
+                                                                                </TD>
+                                                                                <TD width=150>
+                                                                                    <p align="center">-</p>
+                                                                                </TD>
+                                                                            </TR>
+                                                                            <TR borderColor=#cccccc>
+                                                                                <TD class=01 width=100 bgColor="#CCFFFF">
+                                                                                    <DIV align=center>正常範圍</DIV>
+                                                                                </TD>
+                                                                                <TD class=01 width=150>
+                                                                                    <DIV align=center>18.5≦BMI＜24</DIV>
+                                                                                </TD>
+                                                                                <TD width=150>
+                                                                                    <p align="center">-</p>
+                                                                                </TD>
+                                                                            </TR>
+                                                                            <TR borderColor=#cccccc>
+                                                                                <TD class=01 width=100 bgColor="#CCFFFF">
+                                                                                    <DIV align=center>異常範圍</DIV>
+                                                                                </TD>
+                                                                                <TD vAlign=top width=150>
+                                                                                    <DIV align=center><SPAN 
+    class=01>　　過重：24≦BMI＜27<BR>輕度肥胖：27≦BMI＜30<BR>中度肥胖：30≦BMI＜35<BR>重度肥胖：BMI≧35</SPAN>　 
+    <BR>
+                                                                                    </DIV>
+                                                                                </TD>
+                                                                                <TD class=01 vAlign=top width=150>
+                                                                                    <DIV align=center>
+                                                                                        <p>男性：≧90公分<BR>女性：≧80公分<BR></p>
+                                                                                    </DIV>
+                                                                                </TD>
+                                                                            </TR>
+                                                                        </table>
+                                                                        <p>&nbsp;</p>
+                                                                    </td>
+                                                                </tr>
+                                </table>
+                              </div></td>
+                          </tr>
+                          <tr> 
+                            <td height="50" colspan="2"><div align="right"><strong><a href="#top" class="01">TOP<span style="font-family: 新細明體; mso-ascii-font-family: s&#1257;&#02;; mso-hansi-font-family: s&#1257;&#02;; mso-bidi-font-family: Times New Roman; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-TW; mso-bidi-language: AR-SA"><font size="1">▲</font></span></a></strong></div></td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                    <tr> 
+                      <td height="48" background="Images/a1-0_09.gif">&nbsp;</td>
+                    </tr>
+                  </table></TD>
+                <TD background="Images/a1-0_08.gif"><IMG SRC="Images/a1-0_08.gif" WIDTH=6 HEIGHT=2 ALT=""></TD>
+              </TR>
+              <TR> 
+                <TD COLSPAN=3> &nbsp;</TD>
+                <TD> <IMG SRC="Images/a1-0_12.gif" WIDTH=6 HEIGHT=25 ALT=""></TD>
+              </TR>
+            </TABLE>
+            <p> 　</p>
+          </div></td>
+      </tr>
+    </table>
+    </BODY>
+    </HTML>
